@@ -1,2 +1,9 @@
 # Sorting_Algorithms
-Implementation of the most popular sorting algorithms.
+To compile use:
+$make
+
+To run use:
+$make run
+
+To run tests, use the:
+$make test TEST_FILE=teste_file.in

@@ -1,6 +1,4 @@
-#include "list.h"
-
-#define LIST_SIZE 50
+#include "quick.h"
 
 // *************************************************************************
 
@@ -30,27 +28,20 @@ void swap(t_element *p, t_element *s) {
  
 // *************************************************************************
 
-void quickSort(t_element *list, unsigned int begin, unsigned int end) {
+void quick(t_element *list, unsigned int begin, unsigned int end) {
     unsigned int mid = 0;
  
     if(begin < end){
         mid = partition(list, begin, end);
-        quickSort(list, begin, mid);
-        quickSort(list, mid + 1, end);
+        quick(list, begin, mid);
+        quick(list, mid + 1, end);
     }
 }
 
 // *************************************************************************
 
-int main() {
-	t_element list[LIST_SIZE];
-
-	fillList(list, LIST_SIZE);
-	printList("Values", list, LIST_SIZE);
-
-	quickSort(list, 0, LIST_SIZE);
-	printList("Quick Sort", list, LIST_SIZE);
-
-    return 0;
+void quickSort(t_element *list, unsigned int len) {
+	quick(list, 0, len);
 }
 
+// *************************************************************************

@@ -9,6 +9,7 @@
 #include "merge.h"
 #include "quick.h"
 #include "heap.h"
+#include "counting.h"
 
 //#define _POSIX_C_SOURCE 199309L
 
@@ -39,6 +40,8 @@ int main(int argc, char *argv[]) {
 		sort = &quickSort;
 	else if (strcmp(argv[1], "-h") == 0)
 		sort = &heapSort;
+	else if (strcmp(argv[1], "-c") == 0)
+		sort = &countSort;
 	else if (strcmp(argv[1], "-d") == 0)
 		isDefault = 1;
 	else {

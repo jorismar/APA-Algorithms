@@ -41,3 +41,15 @@ void timespec_diff(struct timespec *start, struct timespec *stop, struct timespe
 int cmpfunc(const void* a, const void* b) {
 	return (*(int*)a - *(int*)b);
 }
+
+// *************************************************************************
+
+unsigned int getMaxValue(t_element *list, unsigned int len) {
+	unsigned int max = list[0];
+
+	for (unsigned int i = 1; i < len; i++)
+		max = list[i] > max ? list[i] : max;
+
+	return max;
+}
+

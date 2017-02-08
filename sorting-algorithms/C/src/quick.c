@@ -6,7 +6,7 @@ unsigned int partition(t_element *list, unsigned int begin, unsigned int end) {
     t_element piv = list[begin];
     unsigned int top = begin;
  
-    for(unsigned int i = begin + 1; i <= end; i++) {
+    for(unsigned int i = begin + 1; i < end; i++) {
         if(piv > list[i]) {
             list[top++] = list[i];
             list[i] = list[top];
@@ -17,21 +17,13 @@ unsigned int partition(t_element *list, unsigned int begin, unsigned int end) {
 
     return top;
 }
-
-// *************************************************************************
-
-void swap(t_element *p, t_element *s) {
-    int a = *p;
-    *p = *s;
-    *s = a;
-}
  
 // *************************************************************************
 
 void quick(t_element *list, unsigned int begin, unsigned int end) {
-    unsigned int mid = 0;
+    unsigned int mid;
  
-    if(begin < end){
+    if(begin < end) {
         mid = partition(list, begin, end);
         quick(list, begin, mid);
         quick(list, mid + 1, end);

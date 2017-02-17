@@ -2,7 +2,10 @@
 #define JB_UTILS_H
 
 #include <stdio.h>
+#include <limits.h>
 #include <sys/time.h>
+
+#define INVALID_ELEMENT INT_MAX
 
 typedef int t_element;
 

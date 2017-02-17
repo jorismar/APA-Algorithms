@@ -10,6 +10,7 @@
 #include "quick.h"
 #include "heap.h"
 #include "counting.h"
+#include "bucket.h"
 
 //#define _POSIX_C_SOURCE 199309L
 
@@ -42,6 +43,8 @@ int main(int argc, char *argv[]) {
 		sort = &heapSort;
 	else if (strcmp(argv[1], "-c") == 0)
 		sort = &countSort;
+	else if (strcmp(argv[1], "-bk") == 0)
+		sort = &bucketSort;
 	else if (strcmp(argv[1], "-d") == 0)
 		isDefault = 1;
 	else {
@@ -98,8 +101,8 @@ int main(int argc, char *argv[]) {
 	if (isBenchmark) {
 		printf("%lf", (end.tv_sec - begin.tv_sec) + (end.tv_nsec - begin.tv_nsec) / BILLION);
 		printf(";");
-	} else
-		printList(list, len);
+	} //else
+		//printList(list, len);
 
     return 0;
 }

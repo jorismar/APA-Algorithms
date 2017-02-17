@@ -17,7 +17,7 @@ BENCHMARK_FOLDER = ./benchmark
 
 all:
 	@-mkdir -p $(BIN_FOLDER)
-	@-$(CC) -O3 $(SRC_FOLDER)/*.c -I $(INCLUDE_FOLDER) -std=gnu11 -lrt -o $(BIN_FOLDER)/$(BIN_FILE)
+	@-$(CC) -O3 $(SRC_FOLDER)/*.c -I $(INCLUDE_FOLDER) -std=gnu11 -o $(BIN_FOLDER)/$(BIN_FILE)
 
 run:
 	@$(BIN_FOLDER)/$(BIN_FILE) ${ARGS}

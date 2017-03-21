@@ -2,7 +2,7 @@
 
 This repository is used for the publication of the activities developed in the discipline of Analysis and Design of Algorithms. Below is a list of the activities available here and the method of executing them.
 
-###Sorting 01
+### Sorting 01
 Go to [sorting-algorithms/C/](https://github.com/jorismar/APA-Algorithms/tree/master/sorting-algorithms/C) and in a Terminal tape:
 
 To compile
@@ -17,7 +17,7 @@ To run all sort algorithms to a testN (N = number)
 ```
 $ make test-all TEST="testN"
 ```
-###Sorting 02
+### Sorting 02
 Go to [sorting-algorithms/C/](https://github.com/jorismar/APA-Algorithms/tree/master/sorting-algorithms/C) or 
 [sorting-algorithms/Java/](https://github.com/jorismar/APA-Algorithms/tree/master/sorting-algorithms/Java) and:
 

@@ -2,6 +2,8 @@
 
 This repository is used for the publication of the activities developed in the discipline of Analysis and Design of Algorithms. Below is a list of the activities available here and the method of executing them.
 
+## Sorting Algorithms
+
 ### Sorting 01
 Go to [sorting-algorithms/C/](https://github.com/jorismar/APA-Algorithms/tree/master/sorting-algorithms/C) and in a Terminal tape:
 
@@ -32,6 +34,17 @@ To run all sorting algorithms to process all instances of benchmark analysis:
 $ make run-instances
 ```
 
-### Sorting 03
+## Dynamic Programming
 
-Working...
+### Knapsack Problem
+Go to [dynamic-programming/knapsack-problem/Python/](https://github.com/jorismar/APA-Algorithms/tree/master/dynamic-programming/knapsack-problem/Python) and in a Terminal tape:
+
+To run use:
+```
+$ make
+```
+
+To run a test of the [../Tests/](https://github.com/jorismar/APA-Algorithms/tree/master/dynamic-programming/knapsack-problem/Tests) folder use:
+```
+$ make test INPUT=filename
+```

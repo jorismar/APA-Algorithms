@@ -6,7 +6,7 @@ import sys
 # ============================================================== #
 
 def dynamicKnapsack(num_itens, knapsack_capacity, weights, values):
-    # Init table
+    # Init dynamic programming table
     table = [[0 for x in range(knapsack_capacity + 1)] for y in range(num_itens + 1)] 
 
     # Capacity columns
@@ -18,14 +18,35 @@ def dynamicKnapsack(num_itens, knapsack_capacity, weights, values):
             # Previous item
             prev = table[i][c]
 
-            # New item to add
+            # New weights to add
             new = 0 if weights[i] > c else table[i][c - weights[i]] + values[i]
 
             # Add value in table
             table[i + 1][c] = prev if prev > new else new
 
-    # Result
-    return table[num_itens][knapsack_capacity]
+    # List of selected items
+    knapsack = []
+
+    # Last capacity column
+    c = knapsack_capacity
+
+    # Last items line
+    i = num_itens
+
+    # Get selected itens
+    while c > 0 and i > 0:
+        if table[i][c] != table[i - 1][c]:
+            # Storage the index of item in table
+            knapsack.append(i)
+
+            # Update capacity
+            c = c - weights[i - 1]
+
+        # Update item position
+        i = i - 1
+
+    # Result (Best value, List of selected items)
+    return (table[num_itens][knapsack_capacity], knapsack)
 
 # ============================================================== #
 
@@ -48,6 +69,12 @@ if __name__ == '__main__':
     vi = list(map(int, lines[2].split(' ')))
 
     # Result
-    print(dynamicKnapsack(n, M, pi, vi))
+    value, knapsack = dynamicKnapsack(n, M, pi, vi)
+    
+    # Sort knapsack
+    knapsack.sort()
+
+    # Print result
+    print("\nValue: " + str(value) + "\nSelected items: " + str(knapsack) + "\n")
 else:
 	print("This class can not be imported.")

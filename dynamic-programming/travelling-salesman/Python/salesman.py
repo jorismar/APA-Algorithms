@@ -6,15 +6,6 @@ import sys
 # ============================================================== #
 
 def dynamicSalesman(num_vertices):
-    # Dynamic Programming Table
-    global table
-
-    # Calculates number of paths
-    num_paths = 2
-
-    for i in range(num_vertices - 2):
-        num_paths *= 2
-    
     # Fill the initial set of paths
     setpath = [i for i in range(1, num_vertices)]
 
@@ -24,12 +15,15 @@ def dynamicSalesman(num_vertices):
 # ============================================================== #
 
 def getCost(origin, setpath):
+    # Check if set of path is empty
     if len(setpath) == 0:
         return distances[0][origin], [1, origin + 1]
 
+    # Initiates auxiliar variables
     selected_path = []
     lower = sys.maxsize
 
+    # Select the minimum path
     for s in range(len(setpath)):
         node = setpath.pop(s)
         value, path = getCost(node, setpath)
@@ -41,6 +35,7 @@ def getCost(origin, setpath):
         
         setpath.insert(s, node)
 
+    # Add this node to path
     selected_path.append(origin + 1)
 
     return lower, selected_path
@@ -62,8 +57,10 @@ if __name__ == '__main__':
         line = input('')
         distances.append(list(map(int, line.split(' '))))
 
+    # Get value and optimal path
     value, path = dynamicSalesman(num)
 
+    # Print solution
     print("valor : " + str(value) + "\ncircuito : " + str(path))
 else:
 	print("This class can not be imported.")

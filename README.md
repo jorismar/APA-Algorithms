@@ -48,3 +48,16 @@ To run a test of the [../Tests/](https://github.com/jorismar/APA-Algorithms/tree
 ```
 $ make test INPUT=filename
 ```
+
+### Travelling Salesman Problem
+Go to [dynamic-programming/travelling-salesman/Python/](https://github.com/jorismar/APA-Algorithms/tree/master/dynamic-programming/travelling-salesman/Python) and in a Terminal tape:
+
+To run use:
+```
+$ make
+```
+
+To run a test of the [../Tests/](https://github.com/jorismar/APA-Algorithms/tree/master/dynamic-programming/travelling-salesman/Tests) folder use:
+```
+$ make test INPUT=filename
+```

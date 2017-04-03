@@ -1,6 +1,6 @@
 # Compiler Options
 PYTHON = python3
-SRC_SCRIPT = knapsack.py
+SRC_SCRIPT = salesman.py
 
 # Testing Options
 TEST_FOLDER = ../Tests

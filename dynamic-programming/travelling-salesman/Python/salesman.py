@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import sys
+import sys, re
 
 # ============================================================== #
 
@@ -55,7 +55,14 @@ if __name__ == '__main__':
     # Read distances
     for i in range(num):
         line = input('')
-        distances.append(list(map(int, line.split(' '))))
+        vert_distances = line.split(' ')
+        distances.append([])
+
+        for j in range(num):
+            try:
+                distances[i].append(int(vert_distances[j]))
+            except:
+                pass
 
     # Get value and optimal path
     value, path = dynamicSalesman(num)

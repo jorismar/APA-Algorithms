@@ -44,7 +44,7 @@ To run use:
 $ make
 ```
 
-To run a test of the [../Tests/](https://github.com/jorismar/APA-Algorithms/tree/master/dynamic-programming/knapsack-problem/Tests) folder use:
+To run a test of the [dynamic-programming/knapsack-problem/Tests/](https://github.com/jorismar/APA-Algorithms/tree/master/dynamic-programming/knapsack-problem/Tests) folder use:
 ```
 $ make test INPUT=filename
 ```
@@ -57,7 +57,7 @@ To run use:
 $ make
 ```
 
-To run a test of the [../Tests/](https://github.com/jorismar/APA-Algorithms/tree/master/dynamic-programming/travelling-salesman/Tests) folder use:
+To run a test of the [dynamic-programming/travelling-salesman/Tests/](https://github.com/jorismar/APA-Algorithms/tree/master/dynamic-programming/travelling-salesman/Tests) folder use:
 ```
 $ make test INPUT=filename
 ```
@@ -74,7 +74,7 @@ To run use:
 $ make
 ```
 
-To run a test of the [../../tests/](https://github.com/jorismar/APA-Algorithms/tree/master/greedy-algorithms/minimum-spanning-tree-problem/tests) folder use:
+To run a test of the [greedy-algorithms/minimum-spanning-tree-problem/tests/](https://github.com/jorismar/APA-Algorithms/tree/master/greedy-algorithms/minimum-spanning-tree-problem/tests) folder use:
 ```
 $ make test INPUT=filename
 ```
@@ -87,7 +87,7 @@ To run use:
 $ make
 ```
 
-To run a test of the [../../tests/](https://github.com/jorismar/APA-Algorithms/tree/master/greedy-algorithms/minimum-spanning-tree-problem/tests) folder use:
+To run a test of the [greedy-algorithms/minimum-spanning-tree-problem/tests/](https://github.com/jorismar/APA-Algorithms/tree/master/greedy-algorithms/minimum-spanning-tree-problem/tests) folder use:
 ```
 $ make test INPUT=filename
 ```

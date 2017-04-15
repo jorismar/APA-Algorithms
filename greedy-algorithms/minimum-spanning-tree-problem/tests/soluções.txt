@@ -1,11 +1,20 @@
-instância: mochila01.txt
-valor : 107
-produtos escolhidos : 1, 2, 6, 7
+instância: dij4.txt
+mst: 58
+arestas selecionadas: 19, 17, 22
 
-instância mochila02.txt
-valor : 130
-podutos escolhidos : 2, 3
+instância: dij10.txt
+mst: 23109
+arestas selecionadas: 6226, 4947, 3682, 3421, 2237, 1299, 723, 423, 151
 
-instância mochila03.txt
-valor : 850
-podutos escolhidos : 2, 4
+instância: dij20.txt
+mst: 35659
+arestas selecionadas: 3190, 3204, 2700, 2714, 2254, 2451, 2365, 2379, 2479, 2658, 2093, 2107, 1319, 859, 833, 711, 595, 723, 25
+
+instância: dij40.txt
+mst: 121171
+arestas selecionadas: 9670, 7814, 7717, 7325, 7026, 5060, 4963, 4571, 4272, 4370, 3051, 3992, 3772, 2821, 3892, 5007, 5127, 2796, 2377, 2594, 2176, 2097, 2297, 2378, 1898, 2018, 2236, 2040, 1570, 911, 940, 504, 198, 166, 621, 363, 278, 230, 33
+
+instância: dij50.txt
+mst: 125051
+arestas selecionadas: 6917, 7107, 6502, 6854, 5613, 5172, 5657, 5784, 5175, 4949, 4459, 4606, 3968, 3407, 3772, 2513, 2427, 3226, 2996, 2241, 3275, 2148, 1956, 1927, 1641, 1373, 1347, 1321, 1105, 1019, 657, 492, 107, 1218, 1559, 1566, 1396, 1529, 955, 299, 313, 1065, 950, 584, 597, 610, 413, 259, 25
+

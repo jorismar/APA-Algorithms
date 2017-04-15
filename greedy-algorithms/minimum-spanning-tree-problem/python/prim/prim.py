@@ -9,7 +9,7 @@ INFINITY = sys.maxsize
 
 def prim(num, weights):
     # Initiate controllers
-    nodes = [i for i in range(num)]
+    V = [i for i in range(num)]
     keys = [INFINITY] * num
     fathers = [None] * num
 
@@ -17,25 +17,25 @@ def prim(num, weights):
     keys[0] = 0
 
     # Generates a heap
-    q = Heap.Heap(nodes)
+    Q = Heap.Heap(V)
 
-    while not q.is_empty():
-        v = q.pop()
+    while not Q.is_empty():
+        u = Q.pop()
         
         # Stops if the last node was reached.
-        if q.is_empty():
+        if Q.is_empty():
             break
 
-        for i in range(len(weights[v])):
+        for i in range(len(weights[u])):
             # Gets the parent node.
-            e = (num - 1) - i
+            v = (num - 1) - i
 
             # Selects a candidate path.
-            if q.contains(e) and weights[v][i] < keys[e]:
-                fathers[e] = v
-                keys[e] = weights[v][i]
+            if Q.contains(v) and weights[u][i] < keys[v]:
+                fathers[v] = u
+                keys[v] = weights[u][i]
 
-    # Returns the total weight of the MST
+    # Returns the weight of the MST
     return keys
 
 # ============================================================== #

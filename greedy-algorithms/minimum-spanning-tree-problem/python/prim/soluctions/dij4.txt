@@ -1,0 +1,4 @@
+
+Value: 58
+Selected edges: [19, 17, 22]
+

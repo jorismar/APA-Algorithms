@@ -13,3 +13,12 @@ class Heap():
 
     def push(self, item):
         heapq.heappush(self.heap, item)
+
+    def contains(self, item):
+        return item in self.heap
+
+    def length(self):
+        return len(self.heap)
+
+    def is_empty(self):
+        return len(self.heap) < 1

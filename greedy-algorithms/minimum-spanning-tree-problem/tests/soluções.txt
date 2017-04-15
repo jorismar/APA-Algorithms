@@ -1,0 +1,11 @@
+instância: mochila01.txt
+valor : 107
+produtos escolhidos : 1, 2, 6, 7
+
+instância mochila02.txt
+valor : 130
+podutos escolhidos : 2, 3
+
+instância mochila03.txt
+valor : 850
+podutos escolhidos : 2, 4
